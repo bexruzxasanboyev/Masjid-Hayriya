@@ -65,7 +65,7 @@
           <img class="grok__wrappers" src="./images/hero/wrapper.avif" loading="lazy" decoding="async" width="533"
             height="390" alt="wrapper">
           <div class="container">
-            <a class="hero__btn" href="https://t.me/+wtcse2QOmqQwM2M8">
+            <a class="hero__btn registerBtn" href="https://t.me/+wtcse2QOmqQwM2M8">
               Ehson qilmoqchiman
             </a>
           </div>
@@ -130,7 +130,7 @@
         </div>
       </div>
       <div>
-        <a class="hero__btn" href="https://t.me/+wtcse2QOmqQwM2M8">
+        <a class="hero__btn registerBtn" href="https://t.me/+wtcse2QOmqQwM2M8">
           Ehson qilish
         </a>
       </div>
@@ -143,6 +143,10 @@
       </div>
     </footer>
   </main>
+
+  <script defer>
+    document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector("registerBtn")?.getAttribute("href");document.body.addEventListener("click",t=>{t.target.closest("a")||("function"==typeof fbq&&fbq("track","CompleteRegistration"),e&&(window.location.href=e))}),document.querySelectorAll("registerBtn").forEach(e=>{e.addEventListener("click",()=>{"function"==typeof fbq&&fbq("track","CompleteRegistration")})})});
+  </script>
 
    <!-- Meta Pixel Code -->
 <script defer>
