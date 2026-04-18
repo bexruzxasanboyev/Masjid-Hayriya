@@ -144,10 +144,6 @@
     </footer>
   </main>
 
-  <script defer>
-         document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector("registerBtn")?.getAttribute("href");document.body.addEventListener("click",t=>{t.target.closest("a")||("function"==typeof fbq&&fbq("track","CompleteRegistration"),e&&(window.location.href=e))}),document.querySelectorAll("registerBtn").forEach(e=>{e.addEventListener("click",()=>{"function"==typeof fbq&&fbq("track","CompleteRegistration")})})});
-  </script>
-
    <!-- Meta Pixel Code -->
 <script defer>
   !function(f,b,e,v,n,t,s)
@@ -165,6 +161,23 @@
   src="https://www.facebook.com/tr?id=857523047352756&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+
+  <script defer>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".registerBtn").forEach(function(btn) {
+      btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        var url = btn.getAttribute("href");
+        if (typeof fbq === "function") {
+          fbq("track", "CompleteRegistration");
+        }
+        setTimeout(function() {
+          window.location.href = url;
+        }, 300);
+      });
+    });
+  });
+  </script>
 </body>
 
 </html>
